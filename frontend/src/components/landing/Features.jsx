@@ -1,10 +1,10 @@
 import {
   BarChart3,
   Bot,
-  TrendingUp,
-  Lightbulb,
   FileText,
+  Lightbulb,
   ShieldCheck,
+  TrendingUp,
 } from "lucide-react";
 
 import FeatureCard from "./FeatureCard";
@@ -14,37 +14,37 @@ const features = [
     icon: BarChart3,
     title: "Interactive Dashboards",
     description:
-      "Transform spreadsheets into executive dashboards with KPIs, charts, and business metrics.",
+      "Convert spreadsheets into clean dashboards with KPIs, charts, and business metrics.",
   },
   {
     icon: Bot,
     title: "AI Business Analyst",
     description:
-      "Ask business questions in plain English and receive accurate, data-backed insights instantly.",
+      "Ask questions in natural language and receive business-focused insights from your data.",
   },
   {
     icon: TrendingUp,
     title: "Trend Detection",
     description:
-      "Automatically identify growth opportunities, anomalies, and changing business patterns.",
+      "Automatically discover trends, anomalies, and performance changes across datasets.",
   },
   {
     icon: Lightbulb,
     title: "Strategic Recommendations",
     description:
-      "Receive AI-generated recommendations that support confident business decisions.",
+      "Receive AI-generated suggestions that support informed business decisions.",
   },
   {
     icon: FileText,
     title: "Executive Reports",
     description:
-      "Generate concise business summaries and presentation-ready reports in seconds.",
+      "Generate concise reports suitable for meetings, presentations, and stakeholders.",
   },
   {
     icon: ShieldCheck,
-    title: "Secure Data Processing",
+    title: "Privacy First",
     description:
-      "Business data remains protected with privacy-first processing throughout the workflow.",
+      "Uploaded business data is processed securely with user privacy as a priority.",
   },
 ];
 
@@ -52,30 +52,29 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="bg-muted/30 py-24"
+      className="py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
 
-          <span className="font-semibold uppercase tracking-widest text-primary">
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             Features
           </span>
 
           <h2 className="mt-4 text-4xl font-bold">
-            Everything you need to
-            understand your business.
+            Built for modern business decision making.
           </h2>
 
-          <p className="mt-6 text-lg text-muted-foreground">
-            CorpIQ combines business intelligence,
-            AI-powered analysis, and executive reporting
-            into one intuitive platform.
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            CorpIQ combines AI, business intelligence, and executive reporting
+            into a single workspace that helps teams understand their data
+            faster and make better decisions.
           </p>
 
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
           {features.map((feature) => (
             <FeatureCard

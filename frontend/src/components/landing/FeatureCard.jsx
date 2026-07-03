@@ -14,22 +14,12 @@ export default function FeatureCard({
       transition-all
       duration-300
       hover:-translate-y-2
-      hover:border-primary/40
-      hover:shadow-xl"
+      hover:shadow-xl
+      ease-out
+      hover:border-primary/40"
     >
-      <div
-        className="
-        mb-5
-        inline-flex
-        rounded-xl
-        bg-primary/10
-        p-3
-        text-primary
-        transition-colors
-        group-hover:bg-primary
-        group-hover:text-white"
-      >
-        <Icon size={26} />
+      <div className="mb-5 inline-flex rounded-xl bg-primary/10 p-3 text-primary transition-all group-hover:bg-primary group-hover:text-primary-foreground">
+        <Icon size={24} />
       </div>
 
       <h3 className="mb-3 text-xl font-semibold">

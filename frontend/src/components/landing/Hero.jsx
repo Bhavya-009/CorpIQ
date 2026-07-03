@@ -1,5 +1,7 @@
 import { ArrowRight, PlayCircle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/animations/fadeUp";
 
 export default function Hero() {
   return (
@@ -7,7 +9,11 @@ export default function Hero() {
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-2">
 
         {/* Left Content */}
-        <div>
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+        >
 
           <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             AI-Powered Business Intelligence
@@ -33,14 +39,28 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-4">
 
-            <Button size="lg">
+            <Button
+              size="lg"
+              className="
+        transition-all
+        duration-300
+        hover:scale-[1.02]
+        active:scale-95
+    "
+            >
               Upload Dataset
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
             <Button
-              variant="outline"
               size="lg"
+              variant="outline"
+              className="
+        transition-all
+        duration-300
+        hover:scale-[1.02]
+        active:scale-95
+    "
             >
               <PlayCircle className="mr-2 h-5 w-5" />
               View Demo
@@ -48,7 +68,7 @@ export default function Hero() {
 
           </div>
 
-        </div>
+        </motion.div>
 
         {/* Right Content */}
 

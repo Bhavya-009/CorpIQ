@@ -17,8 +17,8 @@ const navLinks = [
     href: "#features",
   },
   {
-    name: "How It Works",
-    href: "#how-it-works",
+    name: "Workflow",
+    href: "#workflow",
   },
   {
     name: "Use Cases",
@@ -37,10 +37,13 @@ export default function Navbar() {
 
         {/* Logo */}
 
-        <Link to="/" className="text-2xl font-bold tracking-tight">
+        <a
+          href="#top"
+          className="text-2xl font-bold tracking-tight cursor-pointer"
+        >
           <span className="text-foreground">Corp</span>
           <span className="text-primary">IQ</span>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
 
@@ -49,7 +52,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="text-sm font-medium text-muted-foreground transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
             >
               {item.name}
             </a>
