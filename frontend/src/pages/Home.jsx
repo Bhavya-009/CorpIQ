@@ -1,15 +1,15 @@
 import Navbar from "@/components/landing/Navbar";
-import Hero from "@/components/landing/Hero";
-import Features from "@/components/landing/Features";
-import Footer from "@/components/landing/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Features />
-      <Footer />
+
+      <main className="flex min-h-screen items-center justify-center">
+        <h1 className="text-5xl font-bold">
+          CorpIQ
+        </h1>
+      </main>
     </>
   );
 }
