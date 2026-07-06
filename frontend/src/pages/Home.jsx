@@ -3,6 +3,7 @@ import Hero from "@/components/landing/Hero";
 import Features from "@/components/landing/Features";
 import Workflow from "@/components/landing/Workflow";
 import UseCases from "@/components/landing/UseCases";
+import About from "@/components/landing/About";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Features />
       <Workflow />
       <UseCases />
+      <About />
     </div>
   );
 }
