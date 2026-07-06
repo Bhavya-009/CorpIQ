@@ -1,15 +1,21 @@
+import DashboardHeader from "@/components/dashboard/DashboardHeader";
+import DatasetSummary from "@/components/dashboard/DatasetSummary";
+import DataTable from "@/components/dashboard/DataTable";
+
 export default function Dashboard() {
   return (
     <main className="min-h-screen bg-background px-6 py-10">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="text-4xl font-bold">
-          Dashboard
-        </h1>
 
-        <p className="mt-3 text-muted-foreground">
-          Business insights and AI-generated analytics will appear here.
-        </p>
+      <div className="mx-auto max-w-7xl">
+
+        <DashboardHeader />
+
+        <DatasetSummary />
+
+        <DataTable />
+
       </div>
+
     </main>
   );
 }
