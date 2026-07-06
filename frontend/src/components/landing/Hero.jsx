@@ -2,8 +2,10 @@ import { ArrowRight, PlayCircle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/animations/fadeUp";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="bg-background">
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-2">
@@ -41,28 +43,16 @@ export default function Hero() {
 
             <Button
               size="lg"
-              className="
-        transition-all
-        duration-300
-        hover:scale-[1.02]
-        active:scale-95
-    "
+              onClick={() => navigate("/upload")}
             >
               Upload Dataset
-              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
 
             <Button
-              size="lg"
               variant="outline"
-              className="
-        transition-all
-        duration-300
-        hover:scale-[1.02]
-        active:scale-95
-    "
+              size="lg"
+              onClick={() => navigate("/dashboard")}
             >
-              <PlayCircle className="mr-2 h-5 w-5" />
               View Demo
             </Button>
 
